@@ -2,37 +2,61 @@
 // Tentukan tipe data dan struktur data yang menurut kalian tepat
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
 
-// Untuk user Monica
+/** To do Monica property */
+const arrColorMonica = ["Yellow", "Pink", "White", "Purple"];
+const arrRestoMonica = ["Bento", "Sushi", "Pancake", "Eggy", "Tempura", "Bento", "Eggy", "Padang", "Tteok", "Sushi", "Sushi"];
+
+let setColorMonica = new Set(arrColorMonica);
+let setRestoMonica = new Set(arrRestoMonica);
+
+const educationMonica = [
+  { name: "SD 01", city: "Jakarta", graduate: "2016" },
+  { name: "SMP 02", city: "Jakarta", graduate: "2019" },
+  { name: "SMA 03", city: "Tangerang" },
+];
+
+/** To do Wendy Property */
+const arrColorWendy = ["Blue", "Black", "Grey"];
+const arrRestoWendy = ["Tempura", "Bento", "Sushi", "Pancake", "Padang", "Katsu", "Geprek", "Pancake", "Eggy"];
+
+let setColorWendy = new Set(arrColorWendy);
+let setRestoWendy = new Set(arrRestoWendy);
+
+const educationWendy = [
+  { name: "SD 02", city: "Jakarta", graduate: "2010" },
+  { name: "SMP 03", city: "Bogor", graduate: "2013" },
+  { name: "SMA 01", city: "Surabaya", graduate: "2016" },
+  { name: "Universitas Maju", city: "Tangerang" },
+];
+
+/** To do Data Input */
+
+//Monica
 const firstUser = {
   name: "Monica",
   gender: "Female",
   age: 17,
   email: "monica@dingdong.com",
-  favoriteColor: new Set("Yellow", "Pink", "White", "Purple"),
+  favoriteColor: [...setColorMonica],
   isHavePet: "Yes",
-  education: [
-    ["name: SD 01", "city: Jakarta", "graduate: 2016"],
-    ["name: SMP 02", "city: Jakarta", "graduate: 2019"],
-    ["name: SMA 03", "city: Tangerang"],
-  ],
-  favoriteRestaurant: new Set("Bento", "Sushi", "Pancake", "Eggy", "Tempura", "Bento", "Eggy", "Padang", "Tteok", "Sushi", "Sushi"),
+  education: educationMonica,
+  favoriteRestaurant: [...setRestoMonica],
 };
 
-// Untuk user Wendy
+// Wendy
 const secondUser = {
   name: "Wendy",
   gender: "Male",
   age: 23,
   email: "wendy@dingdong.com",
-  favoriteColor: new Set("Blue", "Black", "Grey"),
+  favoriteColor: [...setColorWendy],
   isHavePet: "No",
-  education: [["name: SD 02", "city: Jakarta", "graduate: 2010"], ["name: SMP 03", "city: Bogor", "graduate: 2013"], ["name: SMA 01", "city: Surabaya", "graduate: 2016"], [["name: Universitas Maju", "city: Tangerang"]]],
-  favoriteRestaurant: new Set("Tempura", "Bento", "Sushi", "Pancake", "Padang", "Katsu", "Geprek", "Pancake", "Eggy"),
+  education: educationWendy,
+  favoriteRestaurant: [...setRestoWendy],
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
 const users = [];
-// Gunakan property push pada array untuk memasukkan users
 users.push(firstUser);
 users.push(secondUser);
 
